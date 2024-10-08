@@ -80,19 +80,24 @@ section {
 }
 
 .gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     border: 2px solid #ffab40;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures the image doesn't overflow */
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+    border-radius: 8px;
 }
+
 
 footer {
     text-align: center;
